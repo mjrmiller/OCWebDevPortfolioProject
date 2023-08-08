@@ -240,6 +240,11 @@ for (let i = 0; i < marginNavLinks.length; i++) {
   });
 }
 // travel section UNDER CONSTRUCTION
+function makeElementWithClassName(element, className){
+    document.createElement(element);
+    element.className(className);
+    return element;
+}
 // function travelsSection() {
 //   const mkContainer = document.createElement("div");
 //   mkContainer.className = "mkContainer container-fluid";
