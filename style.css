@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Major+Mono+Display&family=Walter+Turncoat&display=swap");
+* {
+  margin: 0;
+  transition: 1s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #522900;
+}
+
+.paper {
+  background-color: #ecece9;
+  box-shadow: 0 8px 16px 0, 0 16px 32px 0 rgba(0, 11, 73, 0.6588235294);
+  font-family: "Courier Prime", monospace;
+  line-height: 1.6rem;
+}
+.paper .title-row {
+  background-color: #ecece9;
+  min-width: 100%;
+}
+.paper .title-row .left-of-title {
+  border-right: 1px solid #f24333;
+  max-height: 11rem;
+  aspect-ratio: 2/3;
+}
+.paper .title-row #title-div {
+  padding: 0;
+}
+.paper .title-row #title-div h1 {
+  font-family: "Major Mono Display", monospace;
+  color: #192bc2;
+  font-size: 2rem;
+  transition-duration: 2s;
+  text-align: center;
+}
+
+.paper-under-title {
+  min-height: 38rem;
+  background-color: #ecece9;
+  background-image: linear-gradient(0deg, transparent 24%, #78c0e0 25%, #78c0e0 26%, transparent 27%, transparent 74%, #78c0e0 75%, #78c0e0 76%, transparent 77%, transparent);
+  background-size: 100% 2rem, auto;
+  width: 100;
+}
+.paper-under-title .left-of-content {
+  border-right: 1px solid #f24333;
+  min-height: 100%;
+}
+.paper-under-title .left-of-content ::after {
+  border: 1px solid #f24333;
+}
+.paper-under-title .left-of-content .margin-list {
+  padding: 1rem 0;
+  font-family: "Walter Turncoat", cursive;
+  line-height: 2rem;
+}
+.paper-under-title .left-of-content .margin-list a[href] {
+  color: #ba1b1d;
+}
+.paper-under-title .left-of-content .margin-list li {
+  list-style: none;
+}
+.paper-under-title .main-paper {
+  flex-wrap: nowrap;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+.paper-under-title .main-paper .content-row {
+  min-height: 58vh;
+}
+.paper-under-title .main-paper #logo {
+  max-width: 60%;
+  height: 40%;
+  mix-blend-mode: multiply;
+}
+.paper-under-title .main-paper footer {
+  display: inline;
+  margin: 0;
+}
+.paper-under-title .main-paper footer .icon-link {
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid #353535;
+  font-family: "Walter Turncoat", cursive;
+  aspect-ratio: 1;
+}
+.paper-under-title .main-paper footer .icon-link a {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.paper-under-title .main-paper footer .icon-link a[href]:hover {
+  text-decoration: line-through;
+}
+.paper-under-title .main-paper footer .icon-link a[href] {
+  text-decoration: none;
+  color: #353535;
+}
+
+.img-thubnail {
+  box-shadow: 3px 3px 10px 4px rgba(128, 0, 0, 0.4);
+}
+
+h2 {
+  font-family: "Walter Turncoat", cursive;
+  color: #192bc2;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  text-align: center;
+  padding: 0 auto;
+}
+
+.travelQuestionsDiv {
+  justify-content: space-around;
+}
+.travelQuestionsDiv .btn {
+  background-color: #ecece9;
+  font-family: "Walter Turncoat", cursive;
+  color: #ba1b1d;
+  padding: 0;
+}
+.travelQuestionsDiv .btn:hover {
+  background: #ecece9;
+  color: #0a0a0b;
+  text-decoration: line-through;
+}
+
+.navbar {
+  background: #ecece9;
+  font-family: "Major Mono Display", monospace;
+  background: #ffddad;
+}
+.navbar li a[href] {
+  font-family: "Major Mono Display", monospace;
+  text-decoration: none;
+  color: #ba1b1d;
+  text-shadow: 0 3px 6px #ffb627;
+}
+.navbar li {
+  list-style: none;
+  font-size: 1rem;
+  transition-duration: text-decoration 2s;
+}
+.navbar li:hover {
+  text-decoration: line-through;
+}
+.navbar li a:active {
+  text-decoration: line-through;
+  font-variant: all-petite-caps;
+}
+.navbar .container-fluid {
+  justify-content: flex-end;
+}
+.navbar .container-fluid button {
+  background: #ecece9;
+}
+
+#pencil-png {
+  max-height: 0vh;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  #pencil-png {
+    max-height: 55vh;
+    width: auto;
+    aspect-ratio: 358/1795;
+    visibility: visible;
+    left: 75%;
+  }
+  .top-space {
+    padding: 2rem;
+  }
+  .navbar li {
+    font-size: 1.5rem;
+  }
+  .navbar-collapse {
+    justify-content: center;
+    font-size: auto;
+    width: 100%;
+  }
+  .icon-link {
+    width: 3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
