@@ -189,5 +189,9 @@ h2 {
     width: 3rem;
   }
 }
+img {
+  width: 100%;
+  aspect-ratio: 3/4;
+}
 
 /*# sourceMappingURL=style.css.map */

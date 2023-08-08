@@ -213,12 +213,8 @@ for (let i = 0; i < navLinks.length; i++) {
     }
     // sends travelers on an all expenses paid trip to the very complicated but very luxurious travels section
     if (siteMapContent[i].title === "travels") {
-<<<<<<< HEAD
         alert('Sorry! This Section is still under construction. Please explore another section for now. Thanks!');
     //   travelsSection();
-=======
-      travelsSection();
->>>>>>> 842d63172501c5bf03288c1320457902cf283600
     }
   });
 }
@@ -244,7 +240,6 @@ for (let i = 0; i < marginNavLinks.length; i++) {
   });
 }
 // travel section UNDER CONSTRUCTION
-<<<<<<< HEAD
 function makeElementWithClassName(element, className){
     document.createElement(element);
     element.className(className);
@@ -363,121 +358,6 @@ function makeElementWithClassName(element, className){
 //   entireTravelSectionContainerDiv.appendChild(choicesElement);
 //   entireTravelSectionContainerDiv.appendChild(responseElement);
 // }
-=======
-function travelsSection() {
-  const mkContainer = document.createElement("div");
-  mkContainer.className = "mkContainer container-fluid";
-  const mkRow = document.createElement("div");
-  mkRow.className = "mkRow row";
-  const entireTravelSectionContainerDiv = document.createElement("div");
-  entireTravelSectionContainerDiv.className =
-    "row align-items-center entireTravelSectionContainerDiv d-flex justify-content-around";
-
-  paperBelowTitle.innerHTML = "";
-  document
-    .querySelector(".main-paper")
-    .appendChild(mkContainer)
-    .appendChild(mkRow)
-    .appendChild(entireTravelSectionContainerDiv);
-
-  let initialquestion = siteMapContent[3].content[0];
-
-  // append question
-  const firstQuestionPElement = document.createElement("p");
-  firstQuestionPElement.className = "firstQuestionPElement justify-content-center";
-  firstQuestionPElement.textContent = initialquestion.question;
-  entireTravelSectionContainerDiv.appendChild(firstQuestionPElement);
-
-  const choicesElement = document.createElement("div");
-  const responseElement = document.createElement("div");
-  choicesElement.className = "d-flex choicesElement justify-content-around";
-  for (let choice of initialquestion.choices) {
-    let button = document.createElement("button");
-    button.className = "btn btn-sm";
-    button.textContent = choice;
-    button.addEventListener("click", function () {
-
-      switch (choice) {
-        case "Past Trips":
-            secondQuestion = initialquestion.nextQuestions[0][0];
-        //   let destinationList = document.createElement('div');
-        //   destinationList.className = 'col destinationList';
-          const destinationDiv = document.createElement("div");
-          chosenDestinationDiv = document.createElement("div");
-          destinationDiv.className = "d-flex destinationDiv justify-content-around";
-        //   if (!document.getElementById())
-          for (let choice of secondQuestion.choices) {
-            let button = document.createElement("button");
-            button.className = "btn btn-sm";
-            button.textContent = choice;
-            button.addEventListener("click", function () {
-
-              switch (choice) {
-                case "Hilo, Hawaii 2022":
-                    chosenDestination = travelDestinations[1].content;
-                    break;
-                case "Atlanta, Georgia 2023":
-                    chosenDestination = travelDestinations[2].content;
-                    break;
-                case "São Miguel, Portugal 2023":
-                    chosenDestination = travelDestinations[5].content;
-                    break;
-                case "Takoradi, Ghana 2022":
-                    chosenDestination = travelDestinations[6].content;
-                    break;
-                case "Houston, Texas 2021":
-                    chosenDestination = travelDestinations[0].content;
-                    break;
-                case "New Orleans, Louisiana 2023":
-                    chosenDestination = travelDestinations[3].content;
-                    break;
-                case "New Orleans, Louisiana 2019":
-                    chosenDestination = travelDestinations[4].content;
-                    break;
-              }
-              
-              chosenDestinationDiv.innerHTML = `<p>${chosenDestination}</p>`;
-            });
-
-            entireTravelSectionContainerDiv.appendChild(choicesElement.appendChild(button));
-          }
-          entireTravelSectionContainerDiv.appendChild(chosenDestinationDiv);
-        
-          break;
-        case "Future Trips":
-          secondQuestion = initialquestion.nextQuestions[1][0];
-          let futureDestination = document.createElement('div');
-          futureDestination.className = 'col futureDestination';
-          for (let choice of secondQuestion.choices) {
-            let button = document.createElement("button");
-            button.className = "btn btn-sm";
-            button.textContent = choice;
-            button.addEventListener("click", function () {
-            //   if (!document.
-                switch (choice) {
-                case "Cape Town, South Africa 2024":
-                    chosenDestination = travelDestinations[7].content;
-                    break;
-              }
-             futureDestination.innerHTML = `<p>${chosenDestination}</p>`;
-            });
-            futureDestination.appendChild(button);
-
-        }
-        entireTravelSectionContainerDiv.appendChild(futureDestination);
-          
-          break;
-        case "Bucket List":
-          secondQuestion = initialquestion.nextQuestions[2][0];
-      }
-      responseElement.innerHTML = `<p>${secondQuestion.question}</p>`;
-    });
-    choicesElement.appendChild(button);
-  }
-  entireTravelSectionContainerDiv.appendChild(choicesElement);
-  entireTravelSectionContainerDiv.appendChild(responseElement);
-}
->>>>>>> 842d63172501c5bf03288c1320457902cf283600
 
 // TO DO
 // finish travel section
